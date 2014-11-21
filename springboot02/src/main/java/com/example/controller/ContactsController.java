@@ -14,7 +14,7 @@ public class ContactsController {
     @Autowired
     private ContactsService contactsService;
 
-    @RequestMapping("/")
+    @RequestMapping("/contacts")
     public List<Contact> getAll() {
         return contactsService.getAll();
     }
