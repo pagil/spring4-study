@@ -1,6 +1,7 @@
-package com.example;
-import com.mangofactory.swagger.plugin.EnableSwagger;
+package com.example.config;
+
 import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
+import com.mangofactory.swagger.plugin.EnableSwagger;
 import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 import com.wordnik.swagger.model.ApiInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +25,9 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        ApiInfo apiInfo = new ApiInfo("Example API", "API for Example",
-                "Example API terms of service", "Example@test.com",
-                "Example API Licence Type", "Example API License URL");
+        ApiInfo apiInfo = new ApiInfo("Launcher API", "API for Launcher",
+                "Launcher API terms of service", "Launcher@test.com",
+                "Launcher API Licence Type", "Launcher API License URL");
         return apiInfo;
     }
 }
