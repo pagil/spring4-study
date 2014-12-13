@@ -5,7 +5,7 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MapperFacadeFactory implements FactoryBean<MapperFacade> {
     @Override
     public MapperFacade getObject() throws Exception {
