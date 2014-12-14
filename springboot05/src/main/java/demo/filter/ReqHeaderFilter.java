@@ -51,11 +51,7 @@ public class ReqHeaderFilter implements Filter {
 
         @Override
         public Enumeration<String> getHeaderNames() {
-            List<String> names = new ArrayList<>();
-            Enumeration<String> originalHeaders = originalRequest.getHeaderNames();
-            while (originalHeaders.hasMoreElements()) {
-                names.add(originalHeaders.nextElement());
-            }
+            List<String> names = Collections.list(originalRequest.getHeaderNames());
             customHeaders.keySet().stream().forEach(chn -> names.add(chn));
             return Collections.enumeration(names);
         }
